@@ -30,7 +30,6 @@ module.exports = {
           db.yaz(`sonkomut_${message.author.id}`, cmd.help.name)
           if (!message.guild) return message.member.send({ content: `**__Komutlarım dm üzerinden kullanılamaz.__ **`, reply: { messageReference: message.id } });;
           cmd.run(client, message, params);
-          if(message.author.id !== "762420804066738186") { client.channels.cache.get("884142584358920222").send(`${message.author.tag} ${cmd.help.name} komutunu kullandı.`) }
           return;
         } else {
           let sonkomut = db.bul(`sonkomut_${message.author.id}`)
@@ -39,17 +38,13 @@ module.exports = {
             db.yaz(`sonkomut_${message.author.id}`, cmd.help.name)
             if (!message.guild) return message.member.send({ content: `**__Komutlarım dm üzerinden kullanılamaz.__ **`, reply: { messageReference: message.id } });;
             cmd.run(client, message, params);
-            if(message.author.id !== "762420804066738186") { client.channels.cache.get("884142584358920222").send(`${message.author.tag} ${cmd.help.name} komutunu kullandı.`) }
             return;
-            client.channels.cache.get("884142584358920222").send()
-          } else {
+             } else {
             db.yaz(`sonkomut_${message.author.id}`, cmd.help.name)
             if (!message.guild) return message.member.send({ content: `**__Komutlarım dm üzerinden kullanılamaz.__ **`, reply: { messageReference: message.id } });;
             cmd.run(client, message, params);
-            if(message.author.id !== "762420804066738186") { client.channels.cache.get("884142584358920222").send(`${message.author.tag} ${cmd.help.name} komutunu kullandı.`) }
             return;
-            client.channels.cache.get("884142584358920222").send()
-          }
+            }
         }
       } else {
         let komutspamsınır = db.bul(`botkoruma_${message.author.id}`)
@@ -58,9 +53,7 @@ module.exports = {
             db.yaz(`sonkomut_${message.author.id}`, cmd.help.name)
             if (!message.guild) return message.member.send({ content: `**__Komutlarım dm üzerinden kullanılamaz.__ **`, reply: { messageReference: message.id } });;
             cmd.run(client, message, params);
-            if(message.author.id !== "762420804066738186") { client.channels.cache.get("884142584358920222").send(`${message.author.tag} ${cmd.help.name} komutunu kullandı.`) }
             return;
-            client.channels.cache.get("884142584358920222").send()
           } else {
             let sonkomut = db.bul(`sonkomut_${message.author.id}`)
             if (sonkomut === cmd.help.name) if (!db.kontrol(`botkoruma_${message.author.id}`)) {
@@ -68,26 +61,20 @@ module.exports = {
               db.yaz(`sonkomut_${message.author.id}`, cmd.help.name)
               if (!message.guild) return message.member.send({ content: `**__Komutlarım dm üzerinden kullanılamaz.__ **`, reply: { messageReference: message.id } });;
               cmd.run(client, message, params);
-              if(message.author.id !== "762420804066738186") { client.channels.cache.get("884142584358920222").send(`${message.author.tag} ${cmd.help.name} komutunu kullandı.`) }
               return;
-              client.channels.cache.get("884142584358920222").send()
             } else {
               db.ekle(`botkoruma_${message.author.id}`, 1)
               db.yaz(`sonkomut_${message.author.id}`, cmd.help.name)
               if (!message.guild) return message.member.send({ content: `**__Komutlarım dm üzerinden kullanılamaz.__ **`, reply: { messageReference: message.id } });;
               cmd.run(client, message, params);
-              if(message.author.id !== "762420804066738186") { client.channels.cache.get("884142584358920222").send(`${message.author.tag} ${cmd.help.name} komutunu kullandı.`) }
               return;
-              client.channels.cache.get("884142584358920222").send()
             }
             db.sil(`botkoruma_${message.author.id}`)
             db.yaz(`sonkomut_${message.author.id}`, cmd.help.name)
             if (!message.guild) return message.member.send({ content: `**__Komutlarım dm üzerinden kullanılamaz.__ **`, reply: { messageReference: message.id } });;
             cmd.run(client, message, params);
-            if(message.author.id !== "762420804066738186") { client.channels.cache.get("884142584358920222").send(`${message.author.tag} ${cmd.help.name} komutunu kullandı.`) }
             return;
-            client.channels.cache.get("884142584358920222").send()
-          }
+            }
         } else {
           var resimler = ["https://cdn.discordapp.com/attachments/863017070488059924/908844397783814234/Captcha.jpg","https://cdn.discordapp.com/attachments/863017070488059924/908858075820212234/Example-of-a-Yahoo-captcha-that-uses-the-negative-kerning.png"]
           var random = resimler[Math.floor(Math.random() * resimler.length)];
